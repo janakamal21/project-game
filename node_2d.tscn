@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cw1nb88lwoark"]
+
+[ext_resource type="Texture2D" uid="uid://ikux8iirsk4n" path="res://eric-_j-08212.jpg" id="1_0e48y"]
+[ext_resource type="PackedScene" uid="uid://ces6tcy6jh4hc" path="res://char/character_body_2d.tscn" id="2_0e48y"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0e48y"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="player" type="CharacterBody2D" parent="."]
+position = Vector2(742, 623)
+
+[node name="Eric-J-08212" type="Sprite2D" parent="player"]
+position = Vector2(-96.6279, 13.9414)
+scale = Vector2(0.85058, 2.35948)
+texture = ExtResource("1_0e48y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2(-64, 480)
+shape = SubResource("WorldBoundaryShape2D_0e48y")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_0e48y")]
+position = Vector2(663, 752)
